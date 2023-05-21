@@ -1,6 +1,6 @@
 How to install
 
-1.Run git clone 'link projer github'
+1.Run git clone 'link project github'
 - example 'git clone https://github.com/F-Jirayut/laravel_basic.git'
 
 2.Run composer install
