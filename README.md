@@ -14,8 +14,6 @@ How to install
 
 6.Run php artisan migrate
 
-7.Run php artisan db:seed
+7.Run php artisan serve
 
-8.Run php artisan serve
-
-9.Go to link localhost:8000 OR 127.0.0.1:8000
+8.Go to link localhost:8000 OR 127.0.0.1:8000
