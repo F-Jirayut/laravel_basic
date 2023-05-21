@@ -5,7 +5,7 @@ How to install
 2.cd your folder and Run git clone 'link project github'
 - example git clone https://github.com/F-Jirayut/laravel_basic.git
 
-3.Run composer install
+3.cd laravel_basic and Run composer install
 
 4.Run copy .env.example .env or copy .env.example .env
 - edit DB_DATABASE in .env
