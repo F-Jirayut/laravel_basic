@@ -3,7 +3,7 @@ How to install
 1.open cmd or terminal commands
 
 2.cd your folder and Run git clone 'link project github'
-- example 'git clone https://github.com/F-Jirayut/laravel_basic.git'
+- example git clone https://github.com/F-Jirayut/laravel_basic.git
 
 3.Run composer install
 
