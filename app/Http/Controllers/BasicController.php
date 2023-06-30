@@ -163,6 +163,7 @@ class BasicController extends Controller
 
     public function mockData()
     {
+        DB::beginTransaction();
         // รันได้แค่ครั้งเดียวนะ
         $faker = Faker::create();
 
@@ -211,7 +212,7 @@ class BasicController extends Controller
                 'department_id' => $faker->randomElement($departmentIds),
             ]);
         }
-
+    DB::commit();
     return "Mock data success.";
     }
 }
