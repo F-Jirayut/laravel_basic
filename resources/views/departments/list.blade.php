@@ -18,9 +18,10 @@
         <br>
             <h1 style="text-align: center;">Departments</h1>
         <br>
-        {{-- <div style="text-align: right;">
+        <div style="text-align: right;">
             <a href="/department/form" class="btn btn-success">Add</a>
-        </div> --}}
+        </div>
+        <h1>{{ $title }}</h1>
         <table class="table">
             <thead>
               <tr>
@@ -33,9 +34,9 @@
             <tbody>
                 @foreach ($departments as $item)
                 <tr>
-                    <td>{{ $item['id'] }}</td>
-                    <td>{{ $item['name'] }}</td>
-                    <td>{{ $item['active'] ? 'เปิดใช้งาน' : 'ปิดใช้งาน' }}</td>
+                    <td>{{ $item->id }}</td>
+                    <td>{{ $item->name }}</td>
+                    <td>{{ $item->active ? 'เปิดใช้งาน' : 'ปิดใช้งาน' }}</td>
                     {{-- <td width="180">
                         <div class="row">
                             <div class="col">

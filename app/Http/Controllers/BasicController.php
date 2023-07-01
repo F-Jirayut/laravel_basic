@@ -17,7 +17,7 @@ class BasicController extends Controller
     public function select(){
         // sql ปกติ หรือ raw sql
         // report, sql ที่มีความซับซ้อน
-        $raw_sql =  DB::select('select * from departments');
+        $raw_sql =  DB::select('select * from departments limit 10');
 
         // qb query builder
         // ทั่วไป, ลดการเขียน sql
@@ -29,11 +29,14 @@ class BasicController extends Controller
         // doc https://laravel.com/docs/10.x/eloquent
         $model_sql = Department::get();
 
+        $departments = Department::query()->limit(10)->get();
+
         // DB::enableQueryLog();
         dd(
             $raw_sql,
             $qb_sql,
-            $model_sql
+            $model_sql,
+            $departments
         );
     }
 
@@ -115,13 +118,13 @@ class BasicController extends Controller
 
     public function update(){
         // sql ปกติ หรือ raw sql
-        $raw_sql = DB::statement("UPDATE users SET name = 'test_update_raw' where id = 1");
+        $raw_sql = DB::statement("UPDATE users SET username = 'test_update_raw' where id = 1");
 
         // qb query builder
-        $qb_sql = DB::table('users')->where('id', 2)->update(['name' => 'test_update_qb']);
+        $qb_sql = DB::table('users')->where('id', 2)->update(['username' => 'test_update_qb']);
 
         // model query 1
-        $model_sql_1 = User::where('id', 3)->update(['name' => 'test_update_model_1']);
+        $model_sql_1 = User::where('id', 3)->update(['username' => 'test_update_model_1']);
 
         // model query 2
         $user = User::find(4);

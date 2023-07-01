@@ -16,23 +16,8 @@ class DepartmentController extends Controller
         $data["departments"] = [];
         // debug หรือ ดูข้อมูล และจะไม่ทำงานต่อ เมื่อมาถึงคำสั่งนี้
         // dd("Department controller index.");
-        $data["departments"] = [
-            [
-                "id" => 1,
-                "name" => "Account",
-                "active" => true
-            ],
-            [
-                "id" => 2,
-                "name" => "Programmer",
-                "active" => true
-            ],
-            [
-                "id" => 3,
-                "name" => "HR",
-                "active" => false
-            ],
-        ];
+        $data["title"] = "department";
+        $data["departments"] = Department::get();
         return view('departments.list', $data);
     }
 
