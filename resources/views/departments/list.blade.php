@@ -37,7 +37,7 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->active ? 'เปิดใช้งาน' : 'ปิดใช้งาน' }}</td>
-                    {{-- <td width="180">
+                    <td width="180">
                         <div class="row">
                             <div class="col">
                                 <a href="{{ route('department.form', $item->id) }}" class="btn btn-primary">View</a>
@@ -51,7 +51,7 @@
                                 </form>
                             </div>
                         </div>
-                    </td> --}}
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
