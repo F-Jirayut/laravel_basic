@@ -15,7 +15,7 @@
         <br>
 
     <!-- resources/views/departments/create.blade.php -->
-    <form method="POST" action="{{ route('department.form.submit') }}">
+    <form method="POST" action="{{ route('department.form.submit' , $id) }}">
         @csrf
 
         @php

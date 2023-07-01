@@ -30,14 +30,14 @@ class DepartmentController extends Controller
         else{
             $data['department'] = null;
         }
-
+        $data['id'] = $id;
         return view('departments.form', $data);
     }
 
     public function formSubmit(Request $request, $id = null){
         $department = Department::find($id);
 
-        if($id){ // for update
+        if($department){ // for update
             $request->validate([
                 'name' => ['required', Rule::unique('departments')->ignore($department->id)],
                 'description' => 'nullable',
@@ -51,7 +51,6 @@ class DepartmentController extends Controller
                 'description' => ['nullable'],
             ]);
         }
-
         // https://laravel.com/docs/10.x/validation
 
         $department->name = $request->name;
