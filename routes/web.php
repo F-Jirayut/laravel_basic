@@ -3,6 +3,7 @@
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BasicController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Route::get('departments', [DepartmentController::class, 'index'])->name('departm
 Route::get('department/form/{id?}', [DepartmentController::class, 'form'])->name('department.form');
 Route::post('department/form/{id?}', [DepartmentController::class, 'formSubmit'])->name('department.form.submit');
 Route::post('department/delete/{id}', [DepartmentController::class, 'delete'])->name('department.delete');
+
+Route::get('login', [LoginController::class, 'index']);
+Route::post('login', [LoginController::class, 'login']);
 
 // http://localhost:8000/users  => https://kuse.csc.ku.ac.th/users
 // Route::get('users', [UserController::class, 'index'])->name('users.index');

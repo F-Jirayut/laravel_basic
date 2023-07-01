@@ -22,6 +22,11 @@
             <a href="/department/form" class="btn btn-success">Add</a>
         </div>
         <h1>{{ $title }}</h1>
+
+        @if (session('user'))
+            <h1>name : {{ session('user')->username }}</h1>
+        @endif
+
         <table class="table">
             <thead>
               <tr>
