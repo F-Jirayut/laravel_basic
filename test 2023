@@ -3,3 +3,18 @@
 C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(247,5): error MSB8066: Custom build for 'C:\Users\kanya\OneDrive\Desktop\project\ATHOME-APP-Flutter\build\windows\CMakeFiles\de6d5ccaee710cb3d60148dbf01c1976\flutter_windows.dll.rule;C:\Users\kanya\OneDrive\Desktop\project\ATHOME-APP-Flutter\build\windows\CMakeFiles\6cf62341bcfe2d4065eb9eaaf0219234\flutter_assemble.rule' exited with code 1. [C:\Users\kanya\OneDrive\Desktop\project\ATHOME-APP-Flutter\build\windows\flutter\flutter_assemble.vcxproj]
 Building Windows application...                                    81.0s
 Exception: Build process failed.
+
+
+
+Building Windows application...                                    17.6s
+Unhandled exception:
+FileSystemException: writeFrom failed, path = 'C:\Users\kanya\AppData\Local\Temp\flutter_tools.6bf334d3\flutter_tool.e0c9dcb0\app.dill'  
+(OS Error: There is not enough space on the disk.
+, errno = 112)
+#0      _checkForErrorResponse (dart:io/common.dart:55:9)
+#1      _RandomAccessFile.writeFrom.<anonymous closure> (dart:io/file_impl.dart:884:7)
+<asynchronous suspension>
+#2      _FileStreamConsumer.addStream.<anonymous closure>.<anonymous closure>.<anonymous closure> (dart:io/file_impl.dart:218:21)        
+<asynchronous suspension>
+the Dart compiler exited unexpectedly.
+Exception: Unable to generate build files
